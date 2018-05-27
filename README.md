@@ -18,13 +18,13 @@ Requested by False1512 in /r/RequestABot — [submission](https://www.reddit.com
 
 **2.** Clone this repository.
 
-  `$ git clone https://github.com/c-mnzs/postFlusherReddit` or download as a ZIP.
+  `$ git clone https://github.com/c-mnzs/postSaveReddit.git` or download as a ZIP.
 
 **43** Open `main.py` and edit the value of the list `author` with the name of the authors you want; change `all` in `subreddit = reddit.subreddit('all')` to be the name of the subreddit you want to monitor submissions in. You may close this file afterwards.
 
 **5.** Open `praw.ini` and edit the values at the bottom. Refer to step 1 for the values.
 
-**6.** Activate the virtual environment by typing `env/Scripts/activate` in a terminal window.
+**6.** Install PRAW using `$ pip install praw`.
 
 **7.** Execute the program by typing `$ py main.py` in a terminal window.
 
