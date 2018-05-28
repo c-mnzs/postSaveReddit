@@ -14,9 +14,11 @@ submissions = subreddit.stream.submissions() # Submissions stream
 
 start_time = time.time() # Getting the time the script is executed at.
 
-while True:
-    for submission in submissions: # Checks for new submissions.
-            if submission.author.name in authors: # Check if the author is in authors.
+for submission in submissions: # Checks for new submissions.
+            if not submission.author:
+                continue
+                
+            if submission.author.name.lower() in [name.lower() for name in authors]: # Check if the author is in authors.
                 if submission.created_utc > start_time: # Check if the submission was created after the script executed.
                     submission.save()
                     print(f"Saved #{submission.id} | www.reddit.com{submission.url}")
